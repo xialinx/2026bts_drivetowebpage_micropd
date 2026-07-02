@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MicroPD Component Gallery | Beast Academy Classroom</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Gallery scaffolding only — not part of the component system */
+  .gallery-body { padding: 40px; max-width: 860px; }
+  .gallery-title {
+    font-size: 22px; font-weight: 800; color: var(--navy);
+    text-transform: uppercase; letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .gallery-subtitle { font-size: 14px; color: var(--gray); margin-bottom: 40px; }
+  .gallery-section { margin-bottom: 52px; }
+  .gallery-section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gray);
+    border-bottom: 1px solid var(--rule); padding-bottom: 8px; margin-bottom: 24px;
+  }
+  .gallery-note {
+    font-size: 13px; color: var(--gray); margin-bottom: 16px;
+    padding: 10px 14px; background: var(--gray-light);
+    border-left: 3px solid var(--rule); border-radius: 0 3px 3px 0;
+  }
+  .gallery-slot-label {
+    font-size: 11px; font-weight: 600; color: var(--gray);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 8px; margin-top: 24px;
+  }
+  .gallery-slot-label:first-of-type { margin-top: 0; }
+</style>
+</head>
+<body>
+
+<div class="gallery-body">
+  <div class="gallery-title">MicroPD Component Gallery</div>
+  <div class="gallery-subtitle">Beast Academy Classroom · Unit Plan components · All collapsed by default</div>
+
+  <!-- ══ DROPDOWN ══ -->
+  <div class="gallery-section">
+    <div class="gallery-section-label">Component 1 — MicroPdDropdown</div>
+    <div class="gallery-note">
+      Each dropdown maps to one <code>MicroPdDropdown</code> record: title, description, standards, and an optional embed (Canva or image). Multiple dropdowns can appear in a single slot. All collapsed by default.
+    </div>
+
+    <!-- Variant A: Canva embed -->
+    <div class="gallery-slot-label">Variant A — contentType: "canva"</div>
+    <div class="micropd-slot">
+      <details class="pd-dropdown">
+        <summary>
+          <div class="pd-dropdown-left">
+            <span class="pd-badge">PD Type</span>
+            <span class="pd-dropdown-title">Understanding Place Value Progressions</span>
+          </div>
+          <span class="pd-dropdown-standards">2.NBT.A.1, 2.NBT.A.3</span>
+          <span class="pd-chevron material-symbols-outlined">expand_more</span>
+        </summary>
+        <div class="pd-dropdown-body">
+          <div class="pd-dropdown-desc">
+            This resource walks through the research behind how students develop place value understanding across grades K–2, and why regrouping is introduced after students have a concrete model of hundreds, tens, and ones.
+          </div>
+          <div class="pd-dropdown-embed">
+            <div class="pd-embed-placeholder">
+              ☁ Canva embed would appear here<br>
+              <code style="font-size:11px; color: var(--gray);">contentUrl: "https://www.canva.com/..."</code>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Variant B: Image embed -->
+    <div class="gallery-slot-label">Variant B — contentType: "image"</div>
+    <div class="micropd-slot">
+      <details class="pd-dropdown">
+        <summary>
+          <div class="pd-dropdown-left">
+            <span class="pd-badge">PD Type</span>
+            <span class="pd-dropdown-title">Regrouping: Common Misconceptions</span>
+          </div>
+          <span class="pd-dropdown-standards">2.NBT.B.7</span>
+          <span class="pd-chevron material-symbols-outlined">expand_more</span>
+        </summary>
+        <div class="pd-dropdown-body">
+          <div class="pd-dropdown-desc">
+            Students often conflate face value with place value when regrouping. This image illustrates the most common errors seen in early grades and suggests targeted questions to surface and address them.
+          </div>
+          <div class="pd-dropdown-embed">
+            <div class="pd-embed-placeholder">
+              🖼 Image would appear here<br>
+              <code style="font-size:11px; color: var(--gray);">contentUrl: "https://..."</code>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Variant C: No embed (contentType: null) -->
+    <div class="gallery-slot-label">Variant C — contentType: null (text only)</div>
+    <div class="micropd-slot">
+      <details class="pd-dropdown">
+        <summary>
+          <div class="pd-dropdown-left">
+            <span class="pd-badge">PD Type</span>
+            <span class="pd-dropdown-title">Why Expanded Form Before Standard Algorithm</span>
+          </div>
+          <span class="pd-dropdown-standards">2.NBT.A.3</span>
+          <span class="pd-chevron material-symbols-outlined">expand_more</span>
+        </summary>
+        <div class="pd-dropdown-body">
+          <div class="pd-dropdown-desc">
+            Expanded form builds the conceptual bridge between place value understanding and the standard addition algorithm. Students who skip this step often apply the algorithm procedurally without understanding why carrying works.
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Multiple dropdowns in one slot -->
+    <div class="gallery-slot-label">Multiple dropdowns in one slot</div>
+    <div class="micropd-slot">
+      <details class="pd-dropdown">
+        <summary>
+          <div class="pd-dropdown-left">
+            <span class="pd-badge">PD Type</span>
+            <span class="pd-dropdown-title">Connecting Addition and Subtraction</span>
+          </div>
+          <span class="pd-dropdown-standards">2.NBT.B.7</span>
+          <span class="pd-chevron material-symbols-outlined">expand_more</span>
+        </summary>
+        <div class="pd-dropdown-body">
+          <div class="pd-dropdown-desc">
+            Research shows students benefit from seeing addition and subtraction as inverse operations early. This resource outlines how the unit builds that connection through fact families and missing-addend problems.
+          </div>
+        </div>
+      </details>
+      <details class="pd-dropdown">
+        <summary>
+          <div class="pd-dropdown-left">
+            <span class="pd-badge">PD Type</span>
+            <span class="pd-dropdown-title">Using Base 10 Blocks Effectively</span>
+          </div>
+          <span class="pd-dropdown-standards">2.NBT.A.1</span>
+          <span class="pd-chevron material-symbols-outlined">expand_more</span>
+        </summary>
+        <div class="pd-dropdown-body">
+          <div class="pd-dropdown-desc">
+            Manipulatives are most effective when students are asked to predict before they build, and explain after. This guide covers common classroom facilitation moves for Base 10 Block activities in this unit.
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══ CONTENT MAP ══ -->
+  <div class="gallery-section">
+    <div class="gallery-section-label">Component 2 — MicroPdContentMap</div>
+    <div class="gallery-note">
+      A content map groups <code>MicroPdContentMapItem</code> entries by grade (K–5). Each item has an optional thumbnail, title, description, and a reference link to a unit or lesson. All item cards collapsed by default.
+    </div>
+
+    <!-- Full content map with multiple grades -->
+    <div class="gallery-slot-label">Full content map — multiple grades</div>
+    <div class="micropd-slot">
+      <div class="pd-contentmap">
+        <div class="pd-contentmap-header">
+          <span class="pd-badge pd-badge--secondary">Content Map</span>
+          <span class="pd-contentmap-name">Place Value Across Grades</span>
+          <span class="pd-contentmap-hint">*Drag or scroll horizontally inside</span>
+          <button class="pd-contentmap-expand" aria-label="Expand content map" onclick="openContentMapModal(this)">
+            <span class="material-symbols-outlined">open_in_full</span>
+          </button>
+        </div>
+        <div class="pd-contentmap-body">
+
+          <!-- Grade K -->
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">Kindergarten</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">📐</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Counting and Cardinality</div>
+                  <div class="pd-item-ref">Unit 2 · Kindergarten</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Students build foundational number sense by counting objects and understanding that the last number counted represents the total quantity — the basis for all later place value work.</p>
+                <a href="#" class="pd-item-link">Go to Unit 2 · Kindergarten</a>
+              </div>
+            </details>
+          </div>
+
+          <!-- Grade 1 -->
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">1st Grade</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">🔢</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Two-Digit Place Value</div>
+                  <div class="pd-item-ref">Unit 3 · Grade 1</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Students group tens and ones to understand two-digit numbers, laying the groundwork for the three-digit work in this unit.</p>
+                <div class="pd-item-img-placeholder"></div>
+                <a href="#" class="pd-item-link">Go to Unit 3 · Grade 1</a>
+              </div>
+            </details>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">➕</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Adding Within 100</div>
+                  <div class="pd-item-ref">Lesson 8 · Grade 1</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>This lesson introduces adding multiples of 10 to a two-digit number, a direct prerequisite for the regrouping strategies students encounter in Grade 2.</p>
+                <div class="pd-item-img-placeholder"></div>
+                <a href="#" class="pd-item-link">Go to Lesson 8 · Grade 1</a>
+              </div>
+            </details>
+          </div>
+
+          <!-- Grade 2 (current) -->
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">2nd Grade · Current Unit</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">📍</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Place Value (This Unit)</div>
+                  <div class="pd-item-ref">Unit 1 · Grade 2</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Students extend place value understanding to three-digit numbers and apply it to addition and subtraction with regrouping.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- Grade 3 -->
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">3rd Grade</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">🏗️</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Multi-Digit Addition and Subtraction</div>
+                  <div class="pd-item-ref">Unit 2 · Grade 3</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Students apply their understanding of place value to add and subtract numbers up to 1,000, building directly on the regrouping strategies introduced in Grade 2.</p>
+                <a href="#" class="pd-item-link">Go to Unit 2 · Grade 3</a>
+              </div>
+            </details>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">📏</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Rounding to the Nearest 10 or 100</div>
+                  <div class="pd-item-ref">Unit 3 · Grade 3</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Rounding builds on place value fluency; students must understand the value of each digit before they can decide which benchmark it's closer to.</p>
+                <a href="#" class="pd-item-link">Go to Unit 3 · Grade 3</a>
+              </div>
+            </details>
+          </div>
+
+          <!-- Grade 4 -->
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">4th Grade</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">✖️</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Multi-Digit Multiplication</div>
+                  <div class="pd-item-ref">Unit 5 · Grade 4</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Students extend place value understanding to multiply multi-digit numbers using area models and the standard algorithm.</p>
+                <a href="#" class="pd-item-link">Go to Unit 5 · Grade 4</a>
+              </div>
+            </details>
+          </div>
+
+          <!-- Grade 5 -->
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">5th Grade</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">🔣</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Decimals and Place Value</div>
+                  <div class="pd-item-ref">Unit 2 · Grade 5</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Place value extends to the right of the decimal point; students see how tenths and hundredths mirror the structure of tens and hundreds.</p>
+                <a href="#" class="pd-item-link">Go to Unit 2 · Grade 5</a>
+              </div>
+            </details>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">➗</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Dividing Multi-Digit Numbers</div>
+                  <div class="pd-item-ref">Unit 4 · Grade 5</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Long division relies on the same place value decomposition students first encountered when regrouping in addition and subtraction.</p>
+                <a href="#" class="pd-item-link">Go to Unit 4 · Grade 5</a>
+              </div>
+            </details>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimal content map (single grade, no images) -->
+    <div class="gallery-slot-label">Minimal — single grade, items without thumbnails</div>
+    <div class="micropd-slot">
+      <div class="pd-contentmap">
+        <div class="pd-contentmap-header">
+          <span class="pd-badge pd-badge--secondary">Content Map</span>
+          <span class="pd-contentmap-name">Regrouping Progression</span>
+        </div>
+        <div class="pd-contentmap-body">
+          <div class="pd-grade-section">
+            <div class="pd-grade-label">2nd Grade</div>
+            <details class="pd-item">
+              <summary>
+                <div class="pd-item-thumb-placeholder">📘</div>
+                <div class="pd-item-meta">
+                  <div class="pd-item-title">Regrouping Ones to Tens</div>
+                  <div class="pd-item-ref">Lesson 3 · Grade 2</div>
+                </div>
+                <span class="pd-item-chevron material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="pd-item-body">
+                <p>Students trade 10 ones for 1 ten using Base 10 Blocks, building the conceptual foundation for carrying in the standard algorithm.</p>
+                <a href="#" class="pd-item-link">Go to Lesson 3 · Grade 2</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLOT POSITIONS ══ -->
+  <div class="gallery-section">
+    <div class="gallery-section-label">Slot positions in the unit plan</div>
+    <div class="gallery-note">
+      MicroPD can appear in three locations. The <code>.micropd-slot</code> wrapper is the same in all three — only its position in the page differs.
+    </div>
+
+    <div class="gallery-slot-label">belowDescription — after unit description, before sub-unit nav</div>
+    <div style="border: 1.5px dashed var(--pd-rule); border-radius: 4px; padding: 16px; background: var(--pd-light);">
+      <div style="font-size: 13px; color: var(--pd); text-align: center;">
+        .micropd-slot inserted here
+      </div>
+    </div>
+
+    <div class="gallery-slot-label" style="margin-top: 20px;">belowTopics — after lesson table, before Go Deeper</div>
+    <div style="border: 1.5px dashed var(--pd-rule); border-radius: 4px; padding: 16px; background: var(--pd-light);">
+      <div style="font-size: 13px; color: var(--pd); text-align: center;">
+        .micropd-slot inserted here
+      </div>
+    </div>
+
+    <div class="gallery-slot-label" style="margin-top: 20px;">belowResources — after Resources section, before Assessments line</div>
+    <div style="border: 1.5px dashed var(--pd-rule); border-radius: 4px; padding: 16px; background: var(--pd-light);">
+      <div style="font-size: 13px; color: var(--pd); text-align: center;">
+        .micropd-slot inserted here
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Content Map Modal -->
+<div class="pd-modal-overlay" id="pd-modal-overlay" onclick="closeContentMapModal()">
+  <div class="pd-modal" onclick="event.stopPropagation()">
+    <div class="pd-modal-inner" id="pd-modal-inner"></div>
+  </div>
+</div>
+
+<script>
+  function openContentMapModal(btn) {
+    var contentmap = btn.closest('.pd-contentmap');
+    var clone = contentmap.cloneNode(true);
+    var cloneBtn = clone.querySelector('.pd-contentmap-expand');
+    cloneBtn.setAttribute('aria-label', 'Close');
+    cloneBtn.querySelector('.material-symbols-outlined').textContent = 'close_fullscreen';
+    cloneBtn.onclick = function() { closeContentMapModal(); };
+    var inner = document.getElementById('pd-modal-inner');
+    inner.innerHTML = '';
+    inner.appendChild(clone);
+    document.getElementById('pd-modal-overlay').classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    attachDragScroll(inner.querySelector('.pd-contentmap-body'));
+  }
+
+  function closeContentMapModal() {
+    document.getElementById('pd-modal-overlay').classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContentMapModal();
+  });
+
+  function attachDragScroll(el) {
+    if (!el) return;
+    var isDown = false, startX, scrollLeft;
+    el.addEventListener('mousedown', function(e) {
+      isDown = true; el.classList.add('is-dragging');
+      startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft;
+    });
+    el.addEventListener('mouseleave', function() { isDown = false; el.classList.remove('is-dragging'); });
+    el.addEventListener('mouseup', function() { isDown = false; el.classList.remove('is-dragging'); });
+    el.addEventListener('mousemove', function(e) {
+      if (!isDown) return; e.preventDefault();
+      el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX);
+    });
+  }
+
+  document.querySelectorAll('.pd-contentmap-body').forEach(function(el) {
+    var isDown = false, startX, scrollLeft;
+    el.addEventListener('mousedown', function(e) {
+      isDown = true;
+      el.classList.add('is-dragging');
+      startX = e.pageX - el.offsetLeft;
+      scrollLeft = el.scrollLeft;
+    });
+    el.addEventListener('mouseleave', function() {
+      isDown = false;
+      el.classList.remove('is-dragging');
+    });
+    el.addEventListener('mouseup', function() {
+      isDown = false;
+      el.classList.remove('is-dragging');
+    });
+    el.addEventListener('mousemove', function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - el.offsetLeft;
+      el.scrollLeft = scrollLeft - (x - startX);
+    });
+  });
+</script>
+</body>
+</html>
